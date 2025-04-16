@@ -27,8 +27,6 @@ We provide the framework; you execute the breach. This README includes setup ins
 *   **🎯 Targeted Attack:** Utilizes a massive wordlist focused on PH ISP default credentials.
 *   **⚙️ Automated Auditing:** Leverages `wifite` for scanning, target selection, and attack execution (WPS, WPA/WPA2 Handshake Capture & Cracking).
 *   **🐧 Broad Linux Compatibility:** Optimized for Kali Linux, but functional on Ubuntu, Debian, Arch, and other distros (dependencies required).
-*   **📚 Clear Documentation:** Step-by-step guidance for setup and execution.
-*   **💰 Support the Cause:** Donation options available to fuel further development and tool acquisition.
 
 ---
 
@@ -42,9 +40,9 @@ We provide the framework; you execute the breach. This README includes setup ins
     # Or use your distro's package manager (e.g., pacman, dnf)
     ```
 
-2.  **Install Dependencies:** `wifite` and `git` are essential.
+2.  **Install Dependencies:** `wifite` is essential.
     ```bash
-    sudo apt install wifite git -y
+    sudo apt install wifite -y
     # Ensure aircrack-ng suite, hashcat/john are also installed (usually come with Kali/wifite)
     ```
 
@@ -55,15 +53,10 @@ We provide the framework; you execute the breach. This README includes setup ins
     # Look for "(monitor mode enabled)"
     # If issues arise, consult Kali documentation for driver installation.
     ```
-
-4.  **Clone the PH Wordlist Repository:** Get the ammunition.
-    ```bash
-    git clone https://github.com/jcrvnx/PH-WIFI-WORDLISTS.git
-    cd PH-WIFI-WORDLISTS
-    echo "Wordlists downloaded to $(pwd)"
+4. **Download the WIFI wordlists:** Each of these wordlists contains 10 million possible passwords.
+    ``` link
+    https://www.mediafire.com/folder/8lq8574eud1r1/PH_WIFI_WORDLISTS
     ```
-    *Note the directory where the wordlists are stored. You'll need this path.*
-
 ---
 
 ## 🚀 Execution: Running Wifite with PH Wordlists
@@ -71,7 +64,7 @@ We provide the framework; you execute the breach. This README includes setup ins
 1.  **Navigate (Optional):** You don't *need* to be in the wordlist directory to run `wifite`, but know the *full path* to the wordlist file you want to use.
 
 2.  **Launch Wifite with the Dictionary:**
-    *   Identify the *specific* wordlist file you want to use within the cloned `PH-WIFI-WORDLISTS` directory (e.g., `Passwords/PLDT-WIFI-PASSWORDS.txt`, `Passwords/Converge-WIFI-PASSWORDS.txt`, etc.).
+    *   Identify the *specific* wordlist file you want to use within the cloned `PH-WIFI-WORDLISTS` directory (e.g., `/home/orhen/Downloads/pldt.txt`, `Passwords/converge.txt`, etc.).
     *   Run `wifite` with `sudo` (required for network operations) and point it to your chosen dictionary using the `--dict` flag.
 
     ```bash
@@ -103,18 +96,7 @@ We provide the framework; you execute the breach. This README includes setup ins
 *   [Features](#-features)
 *   [Setup & Installation](#️-setup--installation-kali-linux-focus)
 *   [Execution Guide](#-execution-running-wifite-with-ph-wordlists)
-*   [Support & Donations](#-support-the-operation)
 *   [Disclaimer](#️-legal--ethical-warning-️)
-
----
-
-## 💰 Support the Operation
-
-Fuel the underground. Your contributions help acquire better gear, maintain tools, and fund darker projects. Every bit counts towards expanding our capabilities.
-
-[![Donate via PayPal](https://img.shields.io/badge/Donate-PayPal-blue.svg?style=for-the-badge&logo=paypal)](YOUR_PAYPAL_LINK_HERE) <!-- Replace YOUR_PAYPAL_LINK_HERE -->
-[![Donate via Ko-fi](https://img.shields.io/badge/Donate-Ko--fi-red.svg?style=for-the-badge&logo=ko-fi)](YOUR_KOFI_LINK_HERE) <!-- Replace YOUR_KOFI_LINK_HERE -->
-[![Donate via BTC](https://img.shields.io/badge/Donate-Bitcoin-orange.svg?style=for-the-badge&logo=bitcoin)](YOUR_BTC_ADDRESS_HERE) <!-- Replace YOUR_BTC_ADDRESS_HERE -->
 
 ---
 
